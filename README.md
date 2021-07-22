@@ -43,9 +43,11 @@ val professionalCareer = List(
     Company("Letgo"),
     "Senior Backend Engineer",
     """
-      When I joined Letgo in 2018 it was, with over 100M downloads and more than 20M of monthly users, one the top downloaded second-hand marketplace Apps in USA.       The company was only 3 years old at that moment and was growing fast, time-to-market was the priority and delivering new features, always A/B tested, was         our day to day.
-      Among other things, working and dealing with high availability and large scale systems. And how important is to have the correct logging and monitoring of         your systems, with aproximately 700k daily users.
-      Also designing solutions with different AWS (such DynamoDB, SQS, SNS, Aurora, etc) 
+When I joined Letgo in 2018 it was, with over 100M downloads and more than 20M of monthly users, one the top downloaded second-hand marketplace Apps in USA. The company was only 3 years old at that moment and was growing fast, time-to-market was the priority and delivering new features, always A/B tested, was our day to day.
+
+Among other things, working and dealing with high availability and large scale systems. And how important is to have the correct logging and monitoring of your systems, with aproximately 700k daily users.
+
+Also designing solutions with different AWS (such DynamoDB, SQS, SNS, Aurora, etc) 
     """
   ),
   Job(
