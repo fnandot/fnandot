@@ -1,5 +1,5 @@
-# Hello World
-![Website](https://img.shields.io/website?url=http%3A%2F%2Fwww.fernandopradas.com)
+# Fernando Pradas
+![Website](https://img.shields.io/website?url=http%3A%2F%2Ffernandopradas.com)
 ![Build Passing](https://img.shields.io/badge/build-passing-brightgreen)
 ![Tests Passing](https://img.shields.io/badge/test-passing-brightgreen)
 ![Code Quality](https://img.shields.io/badge/code%20quality-A-brightgreen)
@@ -24,73 +24,109 @@ On my free time 🥳 I love to travel ✈️ and learning about science ⚛ divu
 
 ## Interests
 
-+ Science Divulgation
-+ AI Artificial Intelligence
-+ Blockchain & Smart Contracts (Specially in Ethereum)
-+ ...
++ 🧑‍🔬 Science Divulgation
++ 🤖 AI Artificial Intelligence
++ ⛓ Blockchain & Smart Contracts (Specially in Ethereum)
++ ✈ Travelling
 
 ## Experience
-```scala
-case class Company(val name: String);
-case class Job(
-  val company: Company, 
-  val name: String, 
-  val description: String
-);
+```kotlin
+import java.time.LocalDate
+import java.time.Period
 
-val professionalCareer = List(
-  Job(
-    Company("Letgo"),
-    "Senior Backend Engineer",
-    """
-    When I joined Letgo in 2018 it was, with over 100M downloads and more than 20M of monthly users, 
-    one the top downloaded second-hand marketplace Apps in USA. The company was only 3 years old at 
-    that moment and was growing fast, time-to-market was the priority and delivering new features, 
-    always A/B tested, was our day to day.
-    Among other things, working and dealing with high availability and large scale systems. 
-    And how important is to have the correct logging and monitoring of your systems, 
-    with aproximately 700k daily users.
-    Also designing solutions with different AWS (such DynamoDB, SQS, SNS, Aurora, etc) 
-    """
-  ),
-  Job(
-    Company("Atrapalo"),
-    "Senior Software Engineer",
-    """
-      When I joined Atrápalo the company was in the path 
-      of migrating from monolith to microservices. So my 
-      work there was to keep working on that direction 
-      by creating new microservices from the scratch, 
-      always applying DDD.Maintain the legacy codebase 
-      was also important and adapting it to the new 
-      architecture. Also, during my Atrápalo journey 
-      I learned a lot of DevOps culture 
-      (mainly Docker, Jenkins Pipelines)
-    """
-  ),
-  Job(
-    Company("Bab"),
-    "Full-stack Developer",
-    """     
-    A small company with 12-14 employees mainly focused 
-    on and SaaS product consisting of a CMS + e-commerce, 
-    but also developing custom projects for clients.
-    My job here, mainly, was to participate in all phases 
-    (requirements, design and development) of projects 
-    from our clients. Projects such a MOOC platform or an 
-    online magazine kiosk. Also helped in the first steps 
-    of designing the new version of CMS platform.
-    """
-  )
-);
+@JvmInline
+value class Company(val name: String)
 
-val companies = professionalCareer
-    .reverse
-    .map(_.company.name)
-    .reduce(_ + " => " + _);
-    
-print(s"Companies I've worked: ${companies}");
-// Companies I've worked: Bab => Atrapalo => Letgo
+data class Job(
+    val company: Company,
+    val startDate: LocalDate,
+    val endDate: LocalDate,
+    val title: String,
+    val description: String
+) {
+    internal val period: Period = Period.between(startDate, endDate)
+}
+
+fun Job.toStringPeriod() = period
+    .takeIf { it.years > 0 }?.let { "${it.years} years" } ?: "${period.months} months"
+
+val professionalCareer = listOf(
+    Job(
+        Company("Letgo"),
+        LocalDate.of(2018, 1, 1),
+        LocalDate.now(),
+        "Remote Senior Software Engineer",
+        """
+        When I joined Letgo in 2018 it was, with over 100M downloads and more than 20M of monthly users, 
+        one the top downloaded second-hand marketplace Apps in USA. The company was only 3 years old at 
+        that moment and was growing fast, time-to-market was the priority and delivering new features, 
+        always A/B tested, was our day to day.
+        Among other things, working and dealing with high availability and large scale systems. 
+        And how important is to have the correct logging and monitoring of your systems, 
+        with aproximately 700k daily users.
+        Also designing solutions with different AWS (such DynamoDB, SQS, SNS, Aurora, etc) 
+        """.trimIndent()
+    ),
+    Job(
+        Company("La Salle BCN"),
+        LocalDate.of(2020, 2, 1),
+        LocalDate.of(2022, 1, 1),
+        "Teacher",
+        """
+        As part of the faculty of the university master's degree in high performance web programming at 
+        La Salle (Ramon Llull University, Barcelona), my subject is development frameworks. 
+        The course covers various topics to master modern backend frameworks such as dependency injection containers, 
+        logging, ORM and data mapper patterns.
+        """.trimIndent()
+    ),
+    Job(
+        Company("Atrapalo"),
+        LocalDate.of(2015, 11, 1),
+        LocalDate.of(2018, 1, 1),
+        "Senior Software Engineer",
+        """
+          When I joined Atrápalo the company was in the path 
+          of migrating from monolith to microservices. So my 
+          work there was to keep working on that direction 
+          by creating new microservices from the scratch, 
+          always applying DDD.Maintain the legacy codebase 
+          was also important and adapting it to the new 
+          architecture. Also, during my Atrápalo journey 
+          I learned a lot of DevOps culture 
+          (mainly Docker, Jenkins Pipelines)
+        """.trimIndent()
+    ),
+    Job(
+        Company("Bab"),
+        LocalDate.of(2012, 12, 1),
+        LocalDate.of(2015, 11, 1),
+        "Full-stack Developer",
+        """     
+        A small company with 12-14 employees mainly focused 
+        on and SaaS product consisting of a CMS + e-commerce, 
+        but also developing custom projects for clients.
+        My job here, mainly, was to participate in all phases 
+        (requirements, design and development) of projects 
+        from our clients. Projects such a MOOC platform or an 
+        online magazine kiosk. Also helped in the first steps 
+        of designing the new version of CMS platform.
+        """.trimIndent()
+    )
+)
+
+fun main() = println(
+    professionalCareer
+        .sortedByDescending { it.endDate }
+        .joinToString(System.lineSeparator()) { "\t- ${it.title} at ${it.company.name} for ${it.toStringPeriod()}" }
+        .let { "Professional career:${System.lineSeparator()}$it" }
+)
+/*
+Professional career:
+	- Remote Senior Software Engineer at Letgo for 4 years
+	- Teacher at La Salle BCN for 1 years
+	- Senior Software Engineer at Atrapalo for 2 years
+	- Full-stack Developer at Bab for 2 years
+*/
 ```
 
 ## Languages
@@ -100,7 +136,9 @@ let programmingLanguages = [
   "Javascript",
   "Bash",
   "Go",
-  "Scala"
+  "Scala",
+  "Kotlin",
+  "Solidity",
 ];
 
 let spokenLanguages = [
@@ -108,10 +146,18 @@ let spokenLanguages = [
   "Catalan",
   "English"
 ];
+
+console.log(`I'm proficient in ${programmingLanguages.slice(0, -1).join(", ")} and ${programmingLanguages.slice(-1)}.`);
+console.log(`I speak ${spokenLanguages.slice(0, -1).join(", ")} and ${spokenLanguages.slice(-1)}.`);
+
+/*
+I'm proficient in PHP, Javascript, Bash, Go, Scala, Kotlin and Solidity.
+I speak Spanish, Catalan and English.
+*/
 ```
 
-## Philosophy
+## My philosophy
 
 - `write code for humans and not for machines` is my main principle while I'm developing. 
-- `be a team player` because to reach the moon it was not thanks to a single man, but the collaboration between thousands of people.
+- `be a team player` because to reach the moon it was not thanks to a single person, but the collaboration between thousands of people.
 - ...
