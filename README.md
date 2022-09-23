@@ -80,9 +80,9 @@ val professionalCareer = listOf(
         """
         OLX lists around 500k cars on its platform every month and treated more than 
         50k inspections with a quotation for sale. In 2021 OLX Autos sold around 100k cars 
-        and have more than 4,600 employees in the three continents and 10 markets in which it operates.
-        My role as a backend engineer is to help OLX continue to grow and consolidate 
-        in LATAM and the rest of the markets.
+        and have more than 4,600 employees in the three continents and 10 markets 
+        in which it operates.My role as a backend engineer is to help OLX continue to grow 
+        and consolidate in LATAM and the rest of the markets.
         Among the technologies I work with here are Java/Kotlin with Spring Boot, 
         Infrastructure as Code with AWS and Terraform, pipeline definition with Gitlab CI/CD 
         and Kubernetes.
@@ -94,10 +94,11 @@ val professionalCareer = listOf(
         LocalDate.now(),
         "Senior Software Engineer",
         """
-        When I joined Letgo in 2018 it was, with over 100M downloads and more than 20M of monthly users, 
-        one the top downloaded second-hand marketplace Apps in USA. The company was only 3 years old at 
-        that moment and was growing fast, time-to-market was the priority and delivering new features, 
-        always A/B tested, was our day to day.
+        When I joined Letgo in 2018 it was, with over 100M downloads and more than 20M 
+        of monthly users, one the top downloaded second-hand marketplace Apps in USA. 
+        The company was only 3 years old at 
+        that moment and was growing fast, time-to-market was the priority and delivering 
+        new features, always A/B tested, was our day to day.
         Among other things, working and dealing with high availability and large scale systems. 
         And how important is to have the correct logging and monitoring of your systems, 
         with approximately 700k daily users.
