@@ -22,6 +22,15 @@ I recently started in the 🎓 teaching world as a Frameworks teacher at LaSalle
 
 On my free time 🥳 I love to travel ✈️ and learning about science ⚛ divulgation. 
 
+## My principles
+
+- 🧑‍💻 Write the code for your colleagues, not for machines.
+- 🛠️ Pick the right tool for the right job, don't reinvent the wheel.
+- 🤷‍♀️ Don’t solve a problem that doesn’t exist.
+- 🫂 Listen. Inspire. Learn. Share.
+- 🚀 Don’t walk alone, the mankind didn't get to the moon by only one person.
+- 🥑 Be pragmatic, solve it and then iterate.
+
 ## Interests
 
 + 🧑‍🔬 Science Divulgation
@@ -52,10 +61,38 @@ fun Job.toStringPeriod() = period
 
 val professionalCareer = listOf(
     Job(
+        Company("OLX Autos"),
+        LocalDate.of(2022, 7, 1),
+        LocalDate.now(),
+        "Backend Chapter Lead",
+        """
+        As a backend chapter lead my role here is to play as an orchestrator to align efforts 
+        between different squads. As well as a technical reference and cross-team mentor.
+        Part of this role is to help building a backend community and promote knowledge sharing 
+        across all devs, RFCs proposals, etc.
+        """.trimIndent()
+    ),
+    Job(
+        Company("OLX Autos"),
+        LocalDate.of(2022, 1, 1),
+        LocalDate.now(),
+        "Senior Remote Software Engineer",
+        """
+        OLX lists around 500k cars on its platform every month and treated more than 
+        50k inspections with a quotation for sale. In 2021 OLX Autos sold around 100k cars 
+        and have more than 4,600 employees in the three continents and 10 markets in which it operates.
+        My role as a backend engineer is to help OLX continue to grow and consolidate 
+        in LATAM and the rest of the markets.
+        Among the technologies I work with here are Java/Kotlin with Spring Boot, 
+        Infrastructure as Code with AWS and Terraform, pipeline definition with Gitlab CI/CD 
+        and Kubernetes.
+        """.trimIndent()
+    ),
+    Job(
         Company("Letgo"),
         LocalDate.of(2018, 1, 1),
         LocalDate.now(),
-        "Remote Senior Software Engineer",
+        "Senior Software Engineer",
         """
         When I joined Letgo in 2018 it was, with over 100M downloads and more than 20M of monthly users, 
         one the top downloaded second-hand marketplace Apps in USA. The company was only 3 years old at 
@@ -63,7 +100,7 @@ val professionalCareer = listOf(
         always A/B tested, was our day to day.
         Among other things, working and dealing with high availability and large scale systems. 
         And how important is to have the correct logging and monitoring of your systems, 
-        with aproximately 700k daily users.
+        with approximately 700k daily users.
         Also designing solutions with different AWS (such DynamoDB, SQS, SNS, Aurora, etc) 
         """.trimIndent()
     ),
@@ -73,10 +110,11 @@ val professionalCareer = listOf(
         LocalDate.of(2022, 1, 1),
         "Teacher",
         """
-        As part of the faculty of the university master's degree in high performance web programming at 
-        La Salle (Ramon Llull University, Barcelona), my subject is development frameworks. 
-        The course covers various topics to master modern backend frameworks such as dependency injection containers, 
-        logging, ORM and data mapper patterns.
+        As part of the faculty of the university master's degree 
+        in high performance web programming at La Salle (Ramon Llull University, Barcelona). 
+        My subject was development frameworks. 
+        The course covers various topics to master modern backend frameworks such as 
+        dependency injection containers, logging, ORM and data mapper patterns.
         """.trimIndent()
     ),
     Job(
@@ -85,15 +123,19 @@ val professionalCareer = listOf(
         LocalDate.of(2018, 1, 1),
         "Senior Software Engineer",
         """
-          When I joined Atrápalo the company was in the path 
-          of migrating from monolith to microservices. So my 
-          work there was to keep working on that direction 
-          by creating new microservices from the scratch, 
-          always applying DDD.Maintain the legacy codebase 
-          was also important and adapting it to the new 
-          architecture. Also, during my Atrápalo journey 
-          I learned a lot of DevOps culture 
-          (mainly Docker, Jenkins Pipelines)
+        When I joined Letgo in 2018 it was, with over 100M 
+        downloads and more than 20M of monthly users, 
+        one the top downloaded second-hand marketplace Apps in USA. 
+        The company was only 3 years old at that moment and was 
+        growing fast, time-to-market was the priority and delivering 
+        new features, always A/B tested, was our day to day.
+        Among other things, working and dealing with high availability 
+        and large scale systems, by implementing microservices and 
+        Event-Driven Architecture. Keeping in mind how important is 
+        to have the correct logging and monitoring of your systems, 
+        with approximately 700k daily users.
+        Also designing solutions with different Amazon Web Services 
+        (such DynamoDB, SQS, SNS, Aurora, etc).
         """.trimIndent()
     ),
     Job(
@@ -122,7 +164,9 @@ fun main() = println(
 )
 /*
 Professional career:
-	- Remote Senior Software Engineer at Letgo for 4 years
+	- Backend Chapter Lead at OLX Autos for 2 months
+	- Senior Remote Software Engineer at OLX Autos for 8 months
+	- Senior Software Engineer at Letgo for 4 years
 	- Teacher at La Salle BCN for 1 years
 	- Senior Software Engineer at Atrapalo for 2 years
 	- Full-stack Developer at Bab for 2 years
@@ -155,9 +199,3 @@ I'm proficient in PHP, Javascript, Bash, Go, Scala, Kotlin and Solidity.
 I speak Spanish, Catalan and English.
 */
 ```
-
-## My philosophy
-
-- `write code for humans and not for machines` is my main principle while I'm developing. 
-- `be a team player` because to reach the moon it was not thanks to a single person, but the collaboration between thousands of people.
-- ...
