@@ -1,15 +1,8 @@
-theme: jekyll-theme-minimal
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
 
 title: Fernando Pradas
-description: Senior Backend Engineer
+description: Senior Remote Backend Engineer
 
-logo: https://github.com/fnandot/website/raw/master/profile.png
-
-
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - README.md
+logo: https://pbs.twimg.com/profile_images/1550257321061777413/kk5VBD_i_400x400.jpg
