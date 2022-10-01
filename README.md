@@ -28,7 +28,7 @@ On my free time 🥳 I love to travel ✈️ and learning about science ⚛ divu
 - 🛠️ Pick the right tool for the right job, don't reinvent the wheel.
 - 🤷‍♀️ Don’t solve a problem that doesn’t exist.
 - 🫂 Listen. Inspire. Learn. Share.
-- 🚀 Don’t walk alone, the mankind didn't get to the moon by only one person.
+- 🚀 Don’t walk alone, the humanity didn't get to the moon by only one person.
 - 🥑 Be pragmatic, solve it and then iterate.
 
 ## Interests
